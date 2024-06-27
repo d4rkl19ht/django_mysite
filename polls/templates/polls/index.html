@@ -1,0 +1,6 @@
+<!DOCTYPE html>
+<ul>
+{% for question in questions %}
+    <li><a href="{% url 'polls:detail' question.id%}">{{question}}</a></li>
+{%endfor%}
+</ul>

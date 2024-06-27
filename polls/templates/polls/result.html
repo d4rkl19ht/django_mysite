@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<fieldset>
+    <legend><h1>{{question}} Poll Result</h1></legend>
+        {% for choice in question.choice_set.all %}
+            <p>{{choice}} >> {{choice.votes}} vote{{choice.votes|pluralize}} </p>
+        {%endfor%}
+        {% if error_message%}
+            <br>
+            <h2 style="color: red;">{{error_message}}</h2>
+        {%endif%}
+        
+</fieldset> 
